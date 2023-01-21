@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+  xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.eclipse.orbit.bundles</groupId>
+    <artifactId>logging</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>ch.qos.logback.core</artifactId>
+  <version>1.2.3-SNAPSHOT</version>
+  <packaging>eclipse-bundle-recipe</packaging>
+
+  <name>Logback Core Module</name>
+
+  <dependencies>
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-core</artifactId>
+      <version>1.2.3</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.eclipse.ebr</groupId>
+        <artifactId>ebr-maven-plugin</artifactId>
+        <configuration>
+          <licenseMappings>
+            <!-- Logback Core is dual licensed, we pick the EPL for distribution -->
+            <logback-core>Eclipse Public License v2.0</logback-core>
+          </licenseMappings>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>

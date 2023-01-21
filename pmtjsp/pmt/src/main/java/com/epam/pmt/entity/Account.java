@@ -15,12 +15,10 @@ public class Account {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int accountId;
-	@Column(name="domainUrl")
-	private String url;
-	
-	@Column(name="domainusername")
-	private String username;
+	private int courseId;
+
+	@Column(name="Course_Name")
+	private String courseName;
 	@Column(name="domainpassword")
 	private String password;
 	@Column(name="groupname")
